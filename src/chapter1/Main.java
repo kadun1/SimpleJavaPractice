@@ -1,3 +1,5 @@
+package chapter1;
+
 public class Main {
     
     /**
@@ -5,6 +7,10 @@ public class Main {
      * 몇몇 책을 기반으로 하여 코딩 스타일을 따라 습득할 예정
      */
     public static void main(String[] args) {
+        printStr();
+    }
+
+    public static void printStr() {
         System.out.println("Hello World!");
     }
 }
