@@ -4,8 +4,8 @@ public class Customer {
     protected int customerID;
     protected String customerName;
     protected String customerGrade;
-    int bonusPoint;
-    double bonusRatio;
+    public int bonusPoint;
+    protected double bonusRatio;
 
     public Customer() {
         initCustomer();
