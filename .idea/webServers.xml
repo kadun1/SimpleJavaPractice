@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4a525617-6f7e-4cfd-bd43-45fab960b495" name="goorm">
+        <fileTransfer accessType="SFTP" host="52.78.162.166" port="50715" sshConfigId="c2bd6e51-fa16-49d2-afe0-d178f80378fd" sshConfig="root@52.78.162.166:50715 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
