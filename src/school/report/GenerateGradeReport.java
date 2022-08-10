@@ -50,16 +50,17 @@ public class GenerateGradeReport {
             buffer.append(student.getMajorSubject().getSubjectName()+ "\t");
             buffer.append(" | ");
 
-            getScoreGrade(student, subject.getSubjectId());
+            getScoreGrade(student, subject);
 
             buffer.append("\n");
             buffer.append(LINE);
         }
     }
 
-    public void getScoreGrade(Student student, int subjectId) {
+    public void getScoreGrade(Student student, Subject subject) {
         ArrayList<Score> scoreList = student.getScoreList();
         int majorId = student.getMajorSubject().getSubjectId();
+        int subjectId = subject.getSubjectId();
 
         GradeEvaluation[] gradeEvaluation = {new BasicEvaluation(), new MajorEvaluation(),
                             new PassFailEvaluation()}; //학점 평가 클래스
@@ -68,15 +69,15 @@ public class GenerateGradeReport {
             Score score = scoreList.get(i);
             if (score.getSubject().getSubjectId() == subjectId) { //학점 산출할 과목
                 String grade;
-//                if (subject.getGradeType() == Define.PF_TYPE) {
+                if (subject.getGradeType() == Define.PF_TYPE) {
                     grade = gradeEvaluation[Define.PF_TYPE].getGrade(score.getPoint());
-//                } else {
+                } else {
                     if (score.getSubject().getSubjectId() == majorId) {
                         grade = gradeEvaluation[Define.SAB_TYPE].getGrade(score.getPoint());
                     } else {
                         grade = gradeEvaluation[Define.AB_TYPE].getGrade(score.getPoint());
                     }
-//                }
+                }
 
                 buffer.append(score.getPoint());
                 buffer.append(":");
