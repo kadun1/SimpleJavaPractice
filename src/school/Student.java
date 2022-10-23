@@ -6,7 +6,6 @@ public class Student {
     private int studentId;
     private String studentName;
     private Subject majorSubject;
-
     private ArrayList<Score> scoreList = new ArrayList<Score>();
 
     public Student(int studentId, String studentName, Subject majorSubject) {
